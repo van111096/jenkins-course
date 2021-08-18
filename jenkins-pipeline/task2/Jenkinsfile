@@ -1,14 +1,25 @@
 pipeline {
-    agent any
+//     agent any
+    agent {
+        node {
+            lable 'Linux-Slave'
+        }
+    }
     stages {
-        stage('task1') {
+        stage('SVC') {
             steps {
                 sh 'echo "Hello jenkins pipeline"'
+                sh 'echo "next steps"'
             }
         }
-        stage('task2') {
+        stage('Build') {
             steps {
-                sh 'echo "Hello task2"'
+                sh 'echo "Start  task Build"'
+            }
+        }
+        stage('Test') {
+            steps {
+                 sh 'echo "next task test"'
             }
         }
     }
