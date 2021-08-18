@@ -17,9 +17,9 @@ pipeline {
                 sh 'echo "Start  task Build"'
             }
         }
-        stage('Test') {
+        stage('Test1') {
             steps {
-                 sh 'echo "next task test"'
+                 sh 'echo "next task test 1"'
             }
         }
     }
